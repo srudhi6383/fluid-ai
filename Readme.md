@@ -83,7 +83,7 @@ npm run dev
       ```
         { "msg": "User created successfully" }
       ```
-  2. **User Login**
+2.  **User Login**
      - POST ```/user/login```
 
       **Request Body:**
@@ -181,7 +181,7 @@ npm run dev
             "task": { ...updated task details... }
                 }
           ```
-     7. **Delete Task**:
+  7. **Delete Task**:
         - DELETE   ```/task/delete/:id```
         Headers:
            Authorization: ```Bearer <your_jwt_token_here>```
@@ -194,5 +194,3 @@ npm run dev
                 "msg": "Task deleted successfully"
               }
          ```
-
-
