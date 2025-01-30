@@ -38,7 +38,7 @@ npm install
 ### 2. Start the server
 
 ```bash
-npm run dev
+node index.js
 ```
 
 ### Run Locally
