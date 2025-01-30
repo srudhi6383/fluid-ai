@@ -19,9 +19,16 @@ const TaskSchema = new mongoose.Schema(
 
 TaskSchema.set("toJSON", {
 	transform: (doc, ret) => {
+	  if (ret.dueDate && ret.dueDate instanceof Date && !isNaN(ret.dueDate)) {
 		ret.dueDate = ret.dueDate.toISOString().split("T")[0]; // Format date as YYYY-MM-DD
-		return ret;
+	  } else {
+		ret.dueDate = null; // Set fallback to null if invalid or missing
+	  }
+	  return ret;
 	},
-});
+  });
+  
+
+
 
 module.exports = mongoose.model("Task", TaskSchema);

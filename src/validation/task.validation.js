@@ -5,7 +5,7 @@ const createTask = {
 	body: Joi.object().keys({
 		title: Joi.string().required(),
 		description: Joi.string().required(),
-		dueDate: Joi.date(),
+		dueDate: Joi.date().optional(),
 		priority: Joi.string().custom(priority).required(),
 		status: Joi.string().custom(status).required(),
 	}),
@@ -26,7 +26,7 @@ const updateTask = {
 	body: Joi.object().keys({
 		title: Joi.string().required(),
 		description: Joi.string().required(),
-		dueDate: Joi.date().required(),
+		dueDate: Joi.date().optional(),
 		priority: Joi.string().custom(priority).required(),
 		status: Joi.string().custom(status).required(),
 	}),
